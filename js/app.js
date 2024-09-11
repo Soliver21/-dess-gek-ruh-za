@@ -128,4 +128,4 @@ document.addEventListener("DOMContentLoaded", () => {
   renderContent(products);
   const filterBtn = document.getElementById("filter-btn");
   filterBtn.addEventListener("click", showResult);
-});
+}); 
