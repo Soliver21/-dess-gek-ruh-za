@@ -85,7 +85,7 @@ const products = [
   }
 ];
 
-const makeProducts = () => {
+const makeProducts = (products) => {
   return products.map((product) => `
     <div class="product-card" id="${product.id}">
       <img src="img/${product.picture}" alt="${product.name}">
@@ -97,9 +97,10 @@ const makeProducts = () => {
   `);
 };
 
-const renderContent = () => {
+const renderContent = (products) => {
   const renderProduct = document.querySelector(".products");
-  renderProduct.innerHTML = makeProducts().join('');
+  renderProduct.innerHTML = "";
+  renderProduct.innerHTML = makeProducts(products).join('');
 };
 
 const getMinInputValue = () => {
@@ -109,7 +110,7 @@ const getMinInputValue = () => {
 
 const getMaxInputValue = () => {
   const value = parseFloat(document.getElementById("max-price").value);
-  return isNaN(value) ? Infinity : value;
+  return isNaN(value) ? 0 : value;
 };
 
 const filterOptions = () => {
@@ -119,18 +120,12 @@ const filterOptions = () => {
 };
 
 const showResult = () => {
-  const goodProductList = document.getElementById("good-product-list");
   const filteredList = filterOptions();
-  goodProductList.innerHTML = '';
-  filteredList.forEach(product => {
-    const li = document.createElement("li");
-    li.textContent = product.name;
-    goodProductList.appendChild(li);
-  });
+  renderContent(filteredList);
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  renderContent();
+  renderContent(products);
   const filterBtn = document.getElementById("filter-btn");
   filterBtn.addEventListener("click", showResult);
 });
