@@ -1,1 +1,1 @@
-# -dess-gek-ruh-za
+# edessegek aruhaza
