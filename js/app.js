@@ -102,7 +102,30 @@ const renderContent = (products) => {
   renderProduct.innerHTML = "";
   renderProduct.innerHTML = makeProducts(products).join('');
 };
+/*hambi*/
+document.getElementById("hambi").addEventListener("click", () => {
+  if (document.querySelector(".hamburger-menu").style.marginLeft == "-500px") {
+    document.querySelector(".hamburger-menu").style.marginLeft = "0px";
+    document.getElementById("hambi").classList.remove("bi-list")
+    document.getElementById("hambi").classList.add("bi-caret-left")
+  }
+  else{
+    document.querySelector(".hamburger-menu").style.marginLeft = "-500px"
+    document.getElementById("hambi").classList.remove("bi-caret-left")
+    document.getElementById("hambi").classList.add("bi-list")
+  }
+})
+/*cart*/
+document.getElementById("cart").addEventListener("click", () => {
+  if (document.querySelector(".cart").style.marginRight == "-500px") {
+    document.querySelector(".cart").style.marginRight = "0px";
+  }
+  else{
+    document.querySelector(".cart").style.marginRight = "-500px"
+  }
+})
 
+/**********************************/
 const getMinInputValue = () => {
   const value = parseFloat(document.getElementById("min-price").value);
   return isNaN(value) ? 0 : value;

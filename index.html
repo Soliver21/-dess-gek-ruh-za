@@ -3,15 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Édességek Áruháza</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="./js/app.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>Édességek Áruháza</h1>
-        <p>Fedezd fel kínálatunkat és élvezd a finom édességeket!</p>
+        <div class="row">
+            <div class="column">
+                <i class="bi bi-list w-25 h-25" id="hambi"></i>
+            </div>
+            <div class="column"> 
+            <h1>Édességek Áruháza</h1>
+            <p>Fedezd fel kínálatunkat és élvezd a finom édességeket!</p></div>
+            <div class="column">
+                <i class="bi bi-cart4 w-25 h-25" id="cart"></i>
+            </div>
+        </div>
     </header>
+    <!--nav!!!!-->
+    <div class="hamburger-menu">
+        <ul>
+            <li>Főoldal</li>
+            <li>Édességek</li>
+            <li>Valami</li>
+            <li>Valami</li>
+        </ul>
+    </div>
+    <div class="cart">
+        <h3>A kosár tartalma:</h3>
+        <ul></ul>
+        <p id="price">A fizetendő összeg: <span id="value">0</span></p>
+    </div>
     <section class="search">
         <h2>Keresés ár alapján</h2>
         <div class="price-filter">
@@ -29,20 +53,8 @@
                 <!-- Itt lesznek dinamikusan megjelenítve a termékek kártyái -->
         </section>
     </main>
-
-    <section class="cart">
-        <h2>Kosár</h2>
-        <div id="cart-list">
-            <!-- Kosár tartalma dinamikusan jelenik meg -->
-        </div>
-        <div class="cart-summary">
-            <p>Termékek száma: <span id="total-items">0</span></p>
-            <p>Összesen: <span id="total-price">0</span> Ft</p>
-        </div>
-    </section>
-
     <footer>
-        <p>Készítette: HP</p>
+        <p>Készítette: Nem HP</p>
     </footer>
 </body>
 </html>

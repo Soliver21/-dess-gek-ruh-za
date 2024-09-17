@@ -14,16 +14,85 @@ header {
     background-color: #ff9800;
     color: white;
     padding: 20px;
-    text-align: center;
 }
-
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+i{
+    font-size: 2rem;
+    cursor: pointer;
+}
 h1 {
     font-size: 2.5rem;
 }
 h2{
-    margin-bottom: 20px;
+     margin-bottom: 20px;
 }
 
+/*menu*/
+.hamburger-menu {
+    position: fixed;
+    background-color: #ff9800;
+    width: 10%; 
+    height: 100vh; 
+    z-index: 2;
+    left: 0;
+    overflow: auto;
+    margin-left: -500px; 
+}
+
+.hamburger-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.hamburger-menu li {
+    padding: 10px;
+    border-bottom: 1px solid #fff; 
+    color: #fff;
+    cursor: pointer;
+}
+
+.hamburger-menu li:hover {
+    background-color: #f57c00; 
+}
+/*kosár*/
+.cart {
+    position: fixed; 
+    background-color: #ff9800;
+    width: 10%; 
+    height: 100vh; 
+    z-index: 10; 
+    right: 0; 
+    overflow: auto;
+    margin-right: -500px;
+}
+
+
+.cart ul {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+}
+
+.cart ul li {
+    margin-bottom: 10px; 
+}
+
+
+#price {
+    font-weight: bold;
+}
+
+#value {
+    color: #fff; /* Fehér szín a szám értékének */
+}
+
+
+/*szuro*/
 .search {
     margin: 20px auto;
     text-align: center;
@@ -54,31 +123,6 @@ h2{
     object-fit: cover;
 }
 
-.add-to-cart-btn {
-    background-color: #ff9800;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: background-color 0.3s;
-}
-
-.add-to-cart-btn:hover {
-    background-color: #e68900;
-}
-
-.cart {
-    background-color: white;
-    border: 1px solid #ccc;
-    padding: 20px;
-    margin: 20px auto;
-    width: 80%;
-}
-
-.cart-summary {
-    text-align: center;
-}
 
 footer {
     background-color: #333;
